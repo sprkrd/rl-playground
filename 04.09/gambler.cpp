@@ -42,10 +42,10 @@ int main() {
   vector<double> v(s_max+1);
   v[s_max] = 1;
   double error = sweep_once(v);
-  cout << "Error: " << error << endl;
+  cerr << "Error: " << error << endl;
   while (error > eps) {
     error = sweep_once(v);
-    cout << "Error: " << error << endl;
+    cerr << "Error: " << error << endl;
   }
   for (int s = 0; s <= s_max; ++s) {
     cout << s << ',' << v[s] << ",Best actions:";
