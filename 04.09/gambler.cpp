@@ -47,8 +47,9 @@ int main() {
     error = sweep_once(v);
     cerr << "Error: " << error << endl;
   }
+  cout << "State, Value, Best action(s)" << endl;
   for (int s = 0; s <= s_max; ++s) {
-    cout << s << ',' << v[s] << ",Best actions:";
+    cout << s << ", " << v[s] << ",";
     for (int a : best_actions(v, s)) cout << ' ' << a;
     cout << endl;
   }
