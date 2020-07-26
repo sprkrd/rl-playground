@@ -1,0 +1,17 @@
+#!/usr/bin/gnuplot
+
+set datafile separator ","
+
+set multiplot layout 1,2
+
+set dgrid3d
+set hidden3d
+
+set xlabel "Player sum"
+set ylabel "Dealer's card"
+set zlabel "Value"
+splot "v_usable_aces.dat" u 1:2:3 with lines
+
+splot "v_no_usable_aces.dat" u 1:2:3 with lines
+
+pause mouse close
